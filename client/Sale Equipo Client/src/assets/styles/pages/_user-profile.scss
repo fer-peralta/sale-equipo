@@ -1,0 +1,53 @@
+@use "../abstracts" as *;
+
+.profile-container {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1.profile-title {
+        @include titles($titles-color)
+    }
+    .profile-data-container {
+        padding: 2rem;
+        margin-bottom: 1rem;
+        max-width: 320px;
+        width: 100%;
+        background-color: white;
+        box-shadow: 0px 0px 0px 3px rgba(52, 52, 53, 0.185);
+        border-radius: 10px;
+        
+        .user {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+    
+            img.profileAvatar {
+                border-radius: 50%;
+            }
+
+            input {
+                border: none;
+                font-size: 1.2rem;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 10px
+            }
+        }
+    }
+    
+    button.logout-btn {
+        height: 36px;
+        width: 320px;
+        background-color: #5a92a7;
+        border: none;
+        color: white;
+        font-size: 1.2rem;
+        &:hover {
+            transition: 0.7s;
+            background-color: #c9cfdc;
+            color: #403f4b;
+        }
+    }
+}

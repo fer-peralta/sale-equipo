@@ -1,0 +1,39 @@
+@mixin button($color, $bgcolor, $hover-bgcolor, $hover-color) {
+    width: 100%;
+    height: 36px;
+    text-align: center;
+    color: $color;
+    background-color: $bgcolor;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 20px;
+    &:hover {
+        transition: 0.7s;
+        background-color: $hover-bgcolor;
+        color: $hover-color;
+    }
+}
+
+@mixin input($titles-color){
+    
+    width: 100%;
+    font-size: 1rem;
+    color: #4a5568;
+    outline: none;
+    border: 1px solid $titles-color;
+    border-radius: 4px;
+    transition: all 0.5s ease-in-out;
+    &:focus {
+        box-shadow: 0 0 0 2px #cbd5e0;
+    }
+}
+
+@mixin titles($titles-color){
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: $titles-color;
+}
